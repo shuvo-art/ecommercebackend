@@ -7,12 +7,14 @@ const multer = require('multer');
 const path = require('path');
 const cors = require('cors');
 const BASE_URL = process.env.BASE_URL;
+const DATABASE = process.env.DATABASE;
 
 app.use(express.json());
 app.use(cors());
 
 // Database connection With MongoDb
-mongoose.connect("mongodb+srv://shuvo_art:Ixaqmeh1@cluster0.4vlukdz.mongodb.net/e-commerce");
+//mongoose.connect("mongodb+srv://shuvo_art:Ixaqmeh1@cluster0.4vlukdz.mongodb.net/e-commerce");
+mongoose.connect(`${DATABASE}`);
 
 // API Creation
 
